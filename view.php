@@ -25,8 +25,7 @@ echo '
                 <h1>Category</h1> 
                 ';
 
-    $sql = mysqli_query ($mysqli, "select *from test_table left join test_data on test_table.Id=test_data.Id where nameuser='".$_COOKIE["testcookie"]."' ");
-
+    $sql = mysqli_query ($mysqli, "select *from test_data left join test_table on test_data.testid=test_table.Id where nameuser='".$_COOKIE["testcookie"]."' ");
     echo '<select class="slct" name="slct">';
 
 
@@ -35,6 +34,7 @@ echo '
         echo ' <option>'.$result['category'].'</option>';
 
     }
+
     echo '</select>';
 
            echo '
