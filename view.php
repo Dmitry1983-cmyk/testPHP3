@@ -43,16 +43,26 @@ echo '
            ';
     echo '
            <div class="carts">
+           <div class="cart">
+                    <div class="header-cart">
+                        <div class="image_cart">
+                        <img src="'.$result['imageuser'].'">
+                    </div>
+                    <div class="title">
+                    <p>'.$result['titleproduct'].'</p>
+                    </div>
+                    </div>
+                        <div class="desc"></div>
                 ';
     if(isset($_POST['slct']))
     {
-        echo '
-    <div class="cart">
-                    <div class="image_cart">
-                        <p>Title Price</p>
-                        <div class="desc"></div>
-                    </div>
+        while ($result = mysqli_fetch_array($sql)){
+
+            echo '
+    
     ';
+
+        }
     }
     echo '
                 </div>
